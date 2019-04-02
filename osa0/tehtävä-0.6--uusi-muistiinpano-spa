@@ -1,0 +1,7 @@
+1)  selain lähettää uuden muistiinpanon palvelimelle
+    -> POST https://fullstack-exampleapp.herokuapp.com/new_note_spa   (muistiinpanon sisältö ja aikaleima)
+    <- palvelin vastaa 201 Created
+
+2)  sivun javascript-ohjelma lisää uuden muistiinpanon sivun rakenteeseen
+
+3)  selain renderöi sivun uudestaan
