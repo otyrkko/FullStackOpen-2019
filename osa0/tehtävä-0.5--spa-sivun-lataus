@@ -1,0 +1,14 @@
+1)  selain lähettää pyynnön pavelimelle
+    -> GET https://fullstack-exampleapp.herokuapp.com/spa
+    <- palvelin lähettää sivun sisällön ja vastaa 200 OK
+
+2)  selain pyytää palvelimelta sivun tarvitsemat osat
+    -> GET https://fullstack-exampleapp.herokuapp.com/main.css   (stylesheet)
+    <- palvelin lähettää pyydetyn sisällön ja vastaa 200 OK
+    -> GET https://fullstack-exampleapp.herokuapp.com/spa.js     (sivun javascript ohjelma)
+    <- palvelin lähettää pyydetyn sisällön ja vastaa 200 OK
+    -> GET https://fullstack-exampleapp.herokuapp.com/data.json  (muistiinpanojen sisältö)
+    <- palvelin lähettää pyydetyn sisällön ja vastaa 200 OK
+
+3)  selain renderöi sivun
+
