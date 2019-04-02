@@ -1,0 +1,13 @@
+1)  selain lähettää uuden muistiinpanon palvelimelle
+    -> POST https://fullstack-exampleapp.herokuapp.com/new_note
+    <- palvelin vastaa 302 Found
+2)  selain lataa sivun uudelleen
+    -> GET https://fullstack-exampleapp.herokuapp.com/notes
+    <- palvelin vastaa 304 Not Modified
+3)  selain lataa sivun sisältämän ohjelman
+    -> GET https://fullstack-exampleapp.herokuapp.com/main.js
+    <- palvelin vastaa 304 Not Modified
+4)  selain lataa sivulle listan muistiinpanoista
+    -> GET https://fullstack-exampleapp.herokuapp.com/data.json
+    <- palvelin vastaa 200 OK
+5)  selain renderöi sivun uudestaan
