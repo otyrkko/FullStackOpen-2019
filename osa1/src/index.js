@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => {
-    const now = new Date()
-    const a = 10
-    const b = 20
-    return (    
+const Hello = (props) => {
+    return (
         <div>
-            <p>Hello world, it is {now.toString()}</p>
-            <p>{a} plus {b} is {a + b}</p>
+            <p>Hello {props.name}, {props.age}v (noin)</p>
         </div>
+    )
+}
+
+const App = () => {
+    const nimi = "Jussi"
+    const ika = 10
+    return (    
+        <>
+            <h1>Greetings</h1>
+            <Hello name={nimi} age={ika + 5}/>
+        </>
     )
 }
 
