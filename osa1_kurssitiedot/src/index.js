@@ -16,37 +16,40 @@ const Part = (props) => {
 const Content = (props) => {
     return (
         <div>
-            <Part part={props.part1} count={props.count1} />
-            <Part part={props.part2} count={props.count2} />
-            <Part part={props.part3} count={props.count3} />
+            <Part part={props.parts[0].name} count={props.parts[0].exercises} />
+            <Part part={props.parts[1].name} count={props.parts[1].exercises} />
+            <Part part={props.parts[2].name} count={props.parts[2].exercises} />
         </div>
     )
 }
 
 const Total = (props) => {
     return (
-        <p>yhteensä {props.count} tehtävää</p>
+        <p>yhteensä {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises} tehtävää</p>
     )
 }
 
 const App = () => {
-  const course = 'Half Stack -sovelluskehitys'
-  const part1 = 'Reactin perusteet'
-  const exercises1 = 10
-  const part2 = 'Tiedonvälitys propseilla'
-  const exercises2 = 7
-  const part3 = 'Komponenttien tila'
-  const exercises3 = 14
-
-  return (
-    <div>
-        <Header title={course} />
-        <Content part1={part1} count1={exercises1} 
-                 part2={part2} count2={exercises2}
-                 part3={part3} count3={exercises3} />
-        <Total count={exercises1 + exercises2 + exercises3} />
-    </div>
-  )
+    const course = 'Half Stack -sovelluskehitys'
+    const parts = [
+        {
+            name: 'Reactin perusteet',
+            exercises: 10
+        }, {
+            name: 'Tiedonvälitys propseilla',
+            exercises: 7
+        }, {
+            name: 'Komponenttien tila',
+            exercises: 14
+        }
+    ]
+    return (
+        <div>
+            <Header title={course} />
+            <Content parts={parts} />
+            <Total parts={parts} />
+        </div>
+    )
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
